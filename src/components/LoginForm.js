@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from '../styles/components/LoginForm.module.scss'
 
+import Image from "next/image"
+
 export function LoginForm() {
     return(
         <div className={styles.loginContainer}>
@@ -27,7 +29,7 @@ export function LoginForm() {
             
             <div className={styles.buttonGroup}>
                 <button type="submit" className={styles.loginButton} form="loginForm">Entrar</button>
-                <a href="/" className={styles.socialLoginButton}><img src="google.svg"></img>Ou faça login com o Google</a>
+                <a href="/" className={styles.socialLoginButton}><Image src="/google.svg" width={18} height={18}/>Ou faça login com o Google</a>
             </div>
 
             <span className={styles.joinUs}>Não tem uma conta?<a href="/">Cadastre-se</a></span>

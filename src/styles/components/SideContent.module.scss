@@ -1,9 +1,6 @@
 .sideContentContainer {
     background: var(--white300);
     display: flex;
+    justify-content: center;
     min-height: 100vh;
-    img {
-        width: 60%;
-        margin: 0 auto;
-    }
 }
