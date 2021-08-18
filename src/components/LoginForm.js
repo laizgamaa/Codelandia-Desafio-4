@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '../styles/components/LoginForm.module.scss'
 
 import Image from "next/image"
+import Link from 'next/link'
 
 export function LoginForm() {
     return(
@@ -22,17 +23,19 @@ export function LoginForm() {
                         <label htmlFor="rememberMe">Lembre de mim</label>
                     </div>
 
-                    <span><a href="/">Esqueceu sua senha?</a></span>
+                    <span><Link href="/">Esqueceu sua senha?</Link></span>
                 </div>
 
             </form>
             
             <div className={styles.buttonGroup}>
                 <button type="submit" className={styles.loginButton} form="loginForm">Entrar</button>
-                <a href="/" className={styles.socialLoginButton}><Image src="/google.svg" width={18} height={18}/>Ou faça login com o Google</a>
+                <Link href="/">
+                    <a className={styles.socialLoginButton}>Ou faça login com o Google</a>
+                </Link>
             </div>
 
-            <span className={styles.joinUs}>Não tem uma conta?<a href="/">Cadastre-se</a></span>
+            <span className={styles.joinUs}>Não tem uma conta?<Link href="/">Cadastre-se</Link></span>
         </div>
     )
 }
